@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "asn1.js": "5.4.1",
-    "tweetnacl": "^1.0.3"
+    "tweetnacl": "https://github.com/hsume2/tweetnacl-js.git#180e189"
   },
   "optionalDependencies": {
     "ed25519": "0.0.5"
@@ -79,7 +79,8 @@
     "prepublishOnly": "npm run build",
     "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it --src.tagName='v%s'",
     "release-minor": "release-it minor --src.tagName='v%s' --non-interactive",
-    "release-major": "release-it major --src.tagName='v%s' --non-interactive"
+    "release-major": "release-it major --src.tagName='v%s' --non-interactive",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

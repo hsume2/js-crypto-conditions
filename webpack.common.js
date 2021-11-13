@@ -39,5 +39,8 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
     modules: ['node_modules']
+  },
+  externals: {
+    'expo-random': 'expo-random'
   }
 }
